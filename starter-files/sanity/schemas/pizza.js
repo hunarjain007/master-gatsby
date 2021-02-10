@@ -40,7 +40,7 @@ export default {
       inputComponent: PriceInput,
     },
     {
-      name: 'topping',
+      name: 'toppings',
       title: 'Toppings',
       type: 'array',
       of: [
