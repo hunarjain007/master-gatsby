@@ -24,6 +24,20 @@ const GlobalStyles = createGlobalStyle`
   fieldset {
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--red) var(--white);
+  }
+
+  fieldset::-webkit-scrollbar {
+    width: 12px;
+  }
+  fieldset::-webkit-scrollbar-track {
+    background: var(--white);
+  }
+  fieldset::-webkit-scrollbar-thumb {
+    background-color: var(--red) ;
+    border-radius: 6px;
+    border: 3px solid var(--white);
   }
 
   button {
