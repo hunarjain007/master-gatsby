@@ -58,6 +58,7 @@ async function fetchBeersAndTurnIntoNodes({
 }) {
   const res = await fetch('https://api.sampleapis.com/beers/ale');
   const beers = await res.json();
+  // console.log(beers);
   for (const beer of beers) {
     const nodeContent = JSON.stringify(beer);
     const nodeMeta = {
@@ -96,7 +97,7 @@ async function turnSlicemastersIntoPages({ graphql, actions }) {
   data.slicemasters.nodes.forEach((slicemaster) => {
     actions.createPage({
       path: `/slicemasters/${slicemaster.slug.current}`,
-      component: path.resolve('./src/templates/slicemaster.js'),
+      component: path.resolve('./src/templates/Slicemaster.js'),
       context: {
         name: slicemaster.name,
         slug: slicemaster.slug.current,
